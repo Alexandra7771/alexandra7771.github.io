@@ -1,0 +1,1861 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Гранит Заозерье — памятники от производителя</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Golos+Text:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --black: #1a1a18;
+  --stone: #2d2d2b;
+  --granite: #3d3d3a;
+  --mid: #6b6b67;
+  --muted: #9b9b96;
+  --light: #e8e6df;
+  --cream: #f4f2eb;
+  --bg: #faf9f5;
+  --white: #ffffff;
+  --green: #1a7a55;
+  --green-light: #edf7f2;
+  --green-mid: #2a9d6e;
+  --green-border: #b8dece;
+  --accent: #c8a96e;
+  --red-svo: #8b3a3a;
+  --serif: 'Playfair Display', Georgia, serif;
+  --sans: 'Golos Text', system-ui, sans-serif;
+  --radius: 10px;
+  --radius-lg: 16px;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: var(--sans);
+  background: var(--bg);
+  color: var(--black);
+  font-size: 15px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: inherit; text-decoration: none; }
+img { display: block; max-width: 100%; }
+
+.container { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
+
+/* ── HEADER ── */
+header {
+  background: var(--white);
+  border-bottom: 1px solid var(--light);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 0;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.logo {
+  font-family: var(--serif);
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--black);
+  letter-spacing: -.01em;
+  line-height: 1.1;
+}
+.logo small {
+  display: block;
+  font-family: var(--sans);
+  font-size: 11px;
+  font-weight: 400;
+  color: var(--muted);
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  margin-top: 1px;
+}
+.header-trust {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.trust-pill {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 12px;
+  color: var(--mid);
+}
+.trust-pill svg { flex-shrink: 0; }
+.header-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 6px;
+}
+.phone-big {
+  font-size: 19px;
+  font-weight: 600;
+  color: var(--black);
+  letter-spacing: -.01em;
+}
+.phone-hours { font-size: 11px; color: var(--muted); }
+.messengers {
+  display: flex;
+  gap: 6px;
+}
+.msg-tag {
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 20px;
+  border: 1px solid var(--light);
+  color: var(--mid);
+  cursor: pointer;
+  transition: all .15s;
+}
+.msg-tag.wa { border-color: #b7dfc8; color: #1a7a55; background: #f0faf5; }
+.msg-tag.tg { border-color: #b5cfe8; color: #1a5fa5; background: #f0f6fb; }
+.msg-tag:hover { border-color: var(--mid); }
+
+/* ── OFFERS BAR ── */
+.offers-bar {
+  background: var(--cream);
+  padding: 20px 0;
+  border-bottom: 1px solid var(--light);
+}
+.offers-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr auto;
+  gap: 14px;
+  align-items: stretch;
+}
+.offer-card {
+  background: var(--white);
+  border: 1px solid var(--light);
+  border-radius: var(--radius);
+  padding: 14px 16px;
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  transition: all .15s;
+}
+.offer-card:hover { border-color: var(--green-border); }
+.offer-icon {
+  width: 38px;
+  height: 38px;
+  background: var(--green-light);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--green);
+  flex-shrink: 0;
+}
+.offer-card.svo .offer-icon { background: rgba(139,58,58,.1); color: var(--red-svo); }
+.offer-card.rassr .offer-icon { background: rgba(200,169,110,.15); color: var(--accent); }
+.offer-text { line-height: 1.4; }
+.offer-disc {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--green);
+  display: block;
+  margin-bottom: 2px;
+}
+.offer-card.svo .offer-disc { color: var(--red-svo); }
+.offer-card.rassr .offer-disc { color: var(--accent); font-family: var(--serif); font-weight: 500; }
+.offer-label {
+  font-size: 12px;
+  color: var(--mid);
+  line-height: 1.4;
+}
+.offer-cta {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  justify-content: center;
+}
+.btn-calc {
+  background: var(--green);
+  color: #fff;
+  border: none;
+  padding: 10px 18px;
+  border-radius: var(--radius);
+  font-size: 13px;
+  font-weight: 600;
+  font-family: var(--sans);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  justify-content: center;
+  white-space: nowrap;
+  transition: background .15s;
+}
+.btn-calc:hover { background: var(--green-mid); }
+.cta-contacts {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+  justify-content: center;
+}
+.cta-msg {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--light);
+  color: var(--mid);
+  cursor: pointer;
+  transition: all .15s;
+}
+.cta-msg.wa { color: #1a7a55; border-color: #b7dfc8; }
+.cta-msg.tg { color: #1a5fa5; border-color: #b5cfe8; }
+.cta-msg.phone { color: var(--accent); border-color: rgba(200,169,110,.4); }
+.cta-msg:hover { transform: scale(1.05); }
+
+/* ── HERO ── */
+.hero {
+  background: var(--stone);
+  color: var(--white);
+  padding: 64px 0 56px;
+  position: relative;
+  overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 600px 400px at 80% 50%, rgba(26,122,85,.18) 0%, transparent 70%),
+    repeating-linear-gradient(45deg, transparent, transparent 40px, rgba(255,255,255,.012) 40px, rgba(255,255,255,.012) 41px);
+}
+.hero-inner {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 420px;
+  gap: 48px;
+  align-items: center;
+}
+.hero-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  color: var(--accent);
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+.hero-eyebrow::before {
+  content: '';
+  display: block;
+  width: 24px;
+  height: 1px;
+  background: var(--accent);
+}
+h1 {
+  font-family: var(--serif);
+  font-size: clamp(28px, 4vw, 42px);
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: -.02em;
+  margin-bottom: 18px;
+  color: var(--white);
+}
+h1 em {
+  font-style: normal;
+  color: var(--accent);
+}
+.hero-desc {
+  font-size: 16px;
+  color: rgba(255,255,255,.72);
+  line-height: 1.7;
+  margin-bottom: 28px;
+  max-width: 480px;
+}
+.hero-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 32px;
+}
+.hero-chip {
+  font-size: 13px;
+  padding: 5px 13px;
+  border-radius: 20px;
+  border: 1px solid rgba(255,255,255,.2);
+  color: rgba(255,255,255,.8);
+}
+.hero-chip.accent {
+  border-color: var(--accent);
+  color: var(--accent);
+  background: rgba(200,169,110,.08);
+}
+.hero-cta { display: flex; gap: 12px; flex-wrap: wrap; }
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 13px 24px;
+  border-radius: var(--radius);
+  font-size: 14px;
+  font-weight: 500;
+  font-family: var(--sans);
+  cursor: pointer;
+  transition: all .15s;
+  border: none;
+  letter-spacing: .01em;
+}
+.btn-main { background: var(--green); color: #fff; }
+.btn-main:hover { background: var(--green-mid); }
+.btn-ghost {
+  background: transparent;
+  color: rgba(255,255,255,.8);
+  border: 1px solid rgba(255,255,255,.25);
+}
+.btn-ghost:hover { border-color: rgba(255,255,255,.6); color: #fff; }
+
+/* hero form */
+.hero-form {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 28px;
+  box-shadow: 0 2px 40px rgba(0,0,0,.25);
+}
+.form-heading {
+  font-family: var(--serif);
+  font-size: 19px;
+  font-weight: 500;
+  color: var(--black);
+  margin-bottom: 4px;
+}
+.form-sub {
+  font-size: 13px;
+  color: var(--muted);
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 10px; }
+.form-row.one { grid-template-columns: 1fr; }
+.form-group { display: flex; flex-direction: column; gap: 4px; }
+.form-label { font-size: 11px; color: var(--muted); letter-spacing: .03em; text-transform: uppercase; }
+select, input[type=text], input[type=tel], textarea {
+  width: 100%;
+  padding: 9px 12px;
+  background: var(--cream);
+  border: 1px solid var(--light);
+  border-radius: var(--radius);
+  font-size: 13px;
+  color: var(--black);
+  font-family: var(--sans);
+  appearance: none;
+  outline: none;
+  transition: border-color .15s;
+  resize: vertical;
+}
+textarea { min-height: 60px; font-family: var(--sans); }
+select:focus, input:focus, textarea:focus { border-color: var(--green); }
+.msg-choice { display: flex; gap: 6px; flex-wrap: wrap; }
+.mc {
+  font-size: 12px;
+  padding: 5px 12px;
+  border-radius: 20px;
+  border: 1px solid var(--light);
+  color: var(--muted);
+  cursor: pointer;
+  transition: all .15s;
+  background: var(--cream);
+}
+.mc.active { border-color: var(--green); color: var(--green); background: var(--green-light); }
+.btn-submit {
+  width: 100%;
+  padding: 13px;
+  background: var(--green);
+  color: #fff;
+  border: none;
+  border-radius: var(--radius);
+  font-size: 14px;
+  font-weight: 600;
+  font-family: var(--sans);
+  cursor: pointer;
+  margin-top: 12px;
+  transition: background .15s;
+}
+.btn-submit:hover { background: var(--green-mid); }
+.form-promises { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 10px; }
+.fp { font-size: 11px; color: var(--muted); display: flex; align-items: center; gap: 4px; }
+.form-policy { font-size: 11px; color: var(--muted); margin-top: 8px; line-height: 1.5; }
+
+/* ── SECTION COMMON ── */
+.section { padding: 72px 0; }
+.section-alt { background: var(--cream); }
+.section-dark { background: var(--stone); color: var(--white); }
+.s-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--green);
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.s-tag::before {
+  content: '';
+  display: block;
+  width: 16px;
+  height: 1px;
+  background: var(--green);
+}
+.section-dark .s-tag { color: var(--accent); }
+.section-dark .s-tag::before { background: var(--accent); }
+h2 {
+  font-family: var(--serif);
+  font-size: clamp(24px, 3vw, 34px);
+  font-weight: 500;
+  letter-spacing: -.02em;
+  line-height: 1.2;
+  margin-bottom: 10px;
+}
+.s-desc {
+  font-size: 15px;
+  color: var(--mid);
+  max-width: 560px;
+  line-height: 1.7;
+  margin-bottom: 40px;
+}
+.section-dark .s-desc { color: rgba(255,255,255,.6); }
+.section-dark h2 { color: var(--white); }
+
+/* ── CATALOG (caroussel) ── */
+.cat-filters {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+}
+.cat-filter {
+  padding: 8px 16px;
+  border-radius: 24px;
+  border: 1px solid var(--light);
+  background: var(--white);
+  font-size: 13px;
+  color: var(--mid);
+  cursor: pointer;
+  transition: all .15s;
+  font-family: var(--sans);
+}
+.cat-filter.active {
+  background: var(--stone);
+  color: var(--white);
+  border-color: var(--stone);
+}
+.cat-filter:hover:not(.active) { border-color: var(--granite); color: var(--black); }
+
+.cat-carousel-wrap { position: relative; }
+.cat-scroll {
+  display: flex;
+  gap: 14px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 12px;
+  scrollbar-width: thin;
+}
+.cat-scroll::-webkit-scrollbar { height: 4px; }
+.cat-scroll::-webkit-scrollbar-track { background: var(--light); border-radius: 2px; }
+.cat-scroll::-webkit-scrollbar-thumb { background: var(--mid); border-radius: 2px; }
+
+.cat-card {
+  flex: 0 0 220px;
+  scroll-snap-align: start;
+  background: var(--white);
+  border: 1px solid var(--light);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: all .2s;
+  cursor: pointer;
+}
+.cat-card:hover { border-color: var(--green-border); transform: translateY(-3px); }
+.cat-img {
+  aspect-ratio: 3/4;
+  background: linear-gradient(135deg, var(--cream) 0%, var(--light) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+.cat-img::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(45deg, transparent, transparent 12px, rgba(0,0,0,.02) 12px, rgba(0,0,0,.02) 13px);
+}
+.cat-img svg { color: var(--granite); opacity: 0.5; }
+.cat-info { padding: 14px 16px; }
+.cat-form {
+  font-size: 11px;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  margin-bottom: 4px;
+}
+.cat-name { font-size: 14px; font-weight: 600; margin-bottom: 8px; }
+.cat-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+  color: var(--mid);
+}
+.cat-size {
+  background: var(--cream);
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 11px;
+}
+.cat-price { font-weight: 700; color: var(--green); }
+.cat-nav {
+  position: absolute;
+  top: 40%;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--white);
+  border: 1px solid var(--light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 2;
+  transition: all .15s;
+  color: var(--mid);
+}
+.cat-nav:hover { border-color: var(--mid); color: var(--black); }
+.cat-nav.prev { left: -18px; }
+.cat-nav.next { right: -18px; }
+
+/* ── PRODUCTS ── */
+.products-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+.prod-card {
+  background: var(--white);
+  border: 1px solid var(--light);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  position: relative;
+  transition: border-color .2s, transform .2s;
+}
+.prod-card:hover { border-color: var(--green-border); transform: translateY(-2px); }
+.prod-card.featured { border-color: var(--green); border-width: 1.5px; }
+.feat-badge {
+  position: absolute;
+  top: -1px;
+  right: 20px;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--green);
+  background: var(--green-light);
+  border: 1px solid var(--green-border);
+  border-top: none;
+  padding: 3px 12px;
+  border-radius: 0 0 8px 8px;
+  letter-spacing: .03em;
+}
+.prod-icon {
+  width: 44px;
+  height: 44px;
+  background: var(--cream);
+  border-radius: var(--radius);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 14px;
+  color: var(--granite);
+}
+.prod-name { font-family: var(--serif); font-size: 18px; font-weight: 500; margin-bottom: 4px; }
+.prod-price { font-size: 14px; color: var(--green); font-weight: 600; margin-bottom: 14px; }
+.prod-list { list-style: none; margin-bottom: 18px; }
+.prod-list li {
+  font-size: 13px;
+  color: var(--mid);
+  padding: 4px 0;
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+  border-bottom: 1px solid var(--cream);
+}
+.prod-list li:last-child { border-bottom: none; }
+.prod-list li::before {
+  content: '';
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--green);
+  flex-shrink: 0;
+  margin-top: 7px;
+}
+.prod-cta { font-size: 13px; color: var(--green); font-weight: 500; cursor: pointer; }
+.prod-cta:hover { text-decoration: underline; }
+
+/* ── FEATURES ── */
+.features-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
+.feat-card {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  background: var(--white);
+  border: 1px solid var(--light);
+  border-radius: var(--radius-lg);
+  padding: 18px;
+  transition: border-color .2s;
+}
+.feat-card:hover { border-color: var(--green-border); }
+.feat-icon-wrap {
+  width: 42px;
+  height: 42px;
+  background: var(--green-light);
+  border-radius: var(--radius);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: var(--green);
+}
+.feat-title { font-size: 14px; font-weight: 600; margin-bottom: 4px; }
+.feat-text { font-size: 13px; color: var(--mid); line-height: 1.6; }
+
+/* ── ABOUT ── */
+.about-wrap { display: grid; grid-template-columns: 340px 1fr; gap: 56px; align-items: start; }
+.about-photo {
+  border-radius: var(--radius-lg);
+  aspect-ratio: 4/5;
+  background: var(--stone);
+  position: relative;
+  overflow: hidden;
+}
+.about-photo::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 60% 30%, rgba(200,169,110,.18), transparent 60%),
+    repeating-linear-gradient(45deg, transparent, transparent 30px, rgba(255,255,255,.015) 30px, rgba(255,255,255,.015) 31px);
+}
+.about-photo-inner {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 12px;
+}
+.about-initials {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  background: rgba(255,255,255,.08);
+  border: 2px solid rgba(255,255,255,.18);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--serif);
+  font-size: 36px;
+  color: var(--accent);
+}
+.about-photo-label { font-size: 12px; color: rgba(255,255,255,.4); text-align: center; }
+.about-content { padding-top: 8px; }
+.about-name { font-family: var(--serif); font-size: 30px; font-weight: 500; margin-bottom: 4px; letter-spacing: -.02em; }
+.about-role {
+  font-size: 12px;
+  color: var(--green);
+  font-weight: 600;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  margin-bottom: 22px;
+}
+.about-text { font-size: 15px; color: var(--mid); line-height: 1.75; }
+.about-text p + p { margin-top: 14px; }
+.about-text .lead { color: var(--black); font-size: 16px; }
+.about-text em { font-style: italic; color: var(--granite); }
+.about-text .quote {
+  margin-top: 18px;
+  padding: 14px 18px;
+  border-left: 3px solid var(--accent);
+  background: var(--cream);
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 16px;
+  color: var(--granite);
+  border-radius: 0 8px 8px 0;
+}
+.about-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-top: 28px;
+}
+.stat-item {
+  padding: 16px;
+  background: var(--white);
+  border-radius: var(--radius);
+  border: 1px solid var(--light);
+}
+.stat-num {
+  font-family: var(--serif);
+  font-size: 26px;
+  font-weight: 500;
+  color: var(--black);
+  letter-spacing: -.02em;
+  margin-bottom: 2px;
+}
+.stat-label { font-size: 12px; color: var(--muted); line-height: 1.4; }
+
+/* ── PROCESS (instead of team) ── */
+.process-carousel {
+  display: flex;
+  gap: 14px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 12px;
+}
+.process-carousel::-webkit-scrollbar { height: 4px; }
+.process-carousel::-webkit-scrollbar-track { background: rgba(255,255,255,.05); border-radius: 2px; }
+.process-carousel::-webkit-scrollbar-thumb { background: rgba(255,255,255,.2); border-radius: 2px; }
+.process-card {
+  flex: 0 0 280px;
+  scroll-snap-align: start;
+  background: rgba(255,255,255,.05);
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+.process-img {
+  aspect-ratio: 3/2;
+  background:
+    linear-gradient(135deg, rgba(255,255,255,.04), rgba(0,0,0,.2)),
+    repeating-linear-gradient(45deg, transparent, transparent 20px, rgba(255,255,255,.015) 20px, rgba(255,255,255,.015) 21px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(200,169,110,.4);
+  position: relative;
+}
+.process-img-badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  font-size: 10px;
+  background: rgba(0,0,0,.5);
+  color: rgba(255,255,255,.6);
+  padding: 3px 8px;
+  border-radius: 12px;
+  letter-spacing: .04em;
+}
+.process-num {
+  font-family: var(--serif);
+  font-size: 60px;
+  color: rgba(200,169,110,.25);
+  font-weight: 500;
+}
+.process-info { padding: 18px; }
+.process-step {
+  font-size: 11px;
+  color: var(--accent);
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+.process-title { font-size: 15px; font-weight: 600; color: var(--white); margin-bottom: 6px; }
+.process-text { font-size: 13px; color: rgba(255,255,255,.6); line-height: 1.55; }
+
+/* ── REVIEWS ── */
+.reviews-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 32px;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+.reviews-rating {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: var(--white);
+  border: 1px solid var(--light);
+  padding: 14px 20px;
+  border-radius: var(--radius);
+}
+.yamap-logo {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  background: #ffcc00;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 15px;
+  color: #000;
+  font-family: var(--sans);
+}
+.rating-num { font-family: var(--serif); font-size: 22px; font-weight: 600; color: var(--black); line-height: 1; }
+.rating-stars { color: #d4a017; font-size: 13px; letter-spacing: 1px; }
+.rating-source { font-size: 11px; color: var(--muted); margin-top: 2px; }
+.rating-link { font-size: 12px; color: var(--green); margin-top: 6px; display: inline-block; }
+
+.reviews-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
+.review-card {
+  background: var(--white);
+  border: 1px solid var(--light);
+  border-radius: var(--radius-lg);
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  transition: border-color .2s;
+}
+.review-card:hover { border-color: var(--green-border); }
+.review-stars { color: #d4a017; font-size: 14px; letter-spacing: 1px; }
+.review-src {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 11px;
+  color: var(--muted);
+  background: var(--cream);
+  padding: 3px 9px;
+  border-radius: 20px;
+  border: 1px solid var(--light);
+}
+.review-quote { font-size: 14px; color: var(--stone); line-height: 1.7; flex: 1; font-style: italic; }
+.review-author {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-top: 12px;
+  border-top: 1px solid var(--light);
+}
+.review-ava {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--cream);
+  border: 1px solid var(--light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--mid);
+  flex-shrink: 0;
+}
+.review-name { font-size: 13px; font-weight: 600; }
+.review-loc { font-size: 12px; color: var(--muted); }
+
+/* ── FAQ ── */
+.faq-list { display: flex; flex-direction: column; gap: 0; }
+.faq-item { border-bottom: 1px solid var(--light); }
+.faq-q {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 18px 0;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--black);
+  user-select: none;
+  transition: color .15s;
+}
+.faq-q:hover { color: var(--green); }
+.faq-toggle {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: var(--cream);
+  border: 1px solid var(--light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-size: 16px;
+  color: var(--mid);
+  transition: all .2s;
+  margin-top: 1px;
+}
+.faq-item.open .faq-toggle { background: var(--green); border-color: var(--green); color: #fff; transform: rotate(45deg); }
+.faq-item.open .faq-q { color: var(--green); }
+.faq-a {
+  font-size: 14px;
+  color: var(--mid);
+  line-height: 1.75;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height .35s ease, padding .35s;
+  padding-bottom: 0;
+}
+.faq-item.open .faq-a { max-height: 500px; padding-bottom: 18px; }
+
+/* ── CTA SECTION ── */
+.cta-section { background: var(--stone); padding: 64px 0; text-align: center; }
+.cta-section h2 { color: var(--white); margin-bottom: 12px; }
+.cta-desc { font-size: 15px; color: rgba(255,255,255,.65); margin-bottom: 32px; }
+.cta-btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+.btn-outline-white {
+  background: transparent;
+  color: rgba(255,255,255,.8);
+  border: 1px solid rgba(255,255,255,.3);
+  padding: 13px 24px;
+  border-radius: var(--radius);
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all .15s;
+}
+.btn-outline-white:hover { border-color: rgba(255,255,255,.7); color: #fff; }
+
+/* ── FOOTER ── */
+footer { background: #151513; color: rgba(255,255,255,.55); padding: 40px 0 28px; }
+.footer-inner { display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 40px; margin-bottom: 32px; }
+.footer-logo { font-family: var(--serif); font-size: 20px; color: var(--white); margin-bottom: 8px; }
+.footer-tagline { font-size: 13px; line-height: 1.6; margin-bottom: 16px; }
+.footer-phone { font-size: 18px; font-weight: 600; color: var(--white); margin-bottom: 4px; }
+.footer-hours { font-size: 12px; }
+.footer-title { font-size: 12px; font-weight: 600; color: var(--white); text-transform: uppercase; letter-spacing: .08em; margin-bottom: 14px; }
+.footer-links { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+.footer-links li { font-size: 13px; cursor: pointer; transition: color .15s; }
+.footer-links li:hover { color: var(--white); }
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,.1);
+  padding-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.fade-up { opacity: 0; transform: translateY(20px); transition: opacity .6s ease, transform .6s ease; }
+.fade-up.visible { opacity: 1; transform: translateY(0); }
+
+@media (max-width: 860px) {
+  .hero-inner { grid-template-columns: 1fr; }
+  .hero-form { display: none; }
+  .offers-grid { grid-template-columns: 1fr; }
+  .products-grid, .reviews-grid, .features-grid { grid-template-columns: 1fr; }
+  .about-wrap { grid-template-columns: 1fr; }
+  .about-photo { aspect-ratio: 3/2; max-height: 260px; }
+  .footer-inner { grid-template-columns: 1fr; }
+  .cat-nav { display: none; }
+}
+</style>
+</head>
+<body>
+
+<!-- header -->
+<header>
+  <div class="container">
+    <div class="header-inner">
+      <div class="logo">
+        Гранит Заозерье
+        <small>Собственное производство · Свои мастера</small>
+      </div>
+      <div class="header-trust">
+        <div class="trust-pill">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" color="#1a7a55"><polyline points="20 6 9 17 4 12"/></svg>
+          Финальная цена в договоре
+        </div>
+        <div class="trust-pill">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" color="#1a7a55"><polyline points="20 6 9 17 4 12"/></svg>
+          Гарантия 10 лет
+        </div>
+        <div class="trust-pill">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" color="#1a7a55"><polyline points="20 6 9 17 4 12"/></svg>
+          В 2–3 раза дешевле Москвы
+        </div>
+      </div>
+      <div class="header-right">
+        <div class="phone-big">+7 (496) 000-00-00</div>
+        <div class="phone-hours">Пн–Пт 9:00–18:00 · Сб 10:00–16:00</div>
+        <div class="messengers">
+          <span class="msg-tag wa">WhatsApp</span>
+          <span class="msg-tag tg">Telegram</span>
+          <span class="msg-tag">MAX</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- OFFERS BAR -->
+<section class="offers-bar">
+  <div class="container">
+    <div class="offers-grid">
+
+      <div class="offer-card">
+        <div class="offer-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        </div>
+        <div class="offer-text">
+          <span class="offer-disc">−10%</span>
+          <span class="offer-label">Пенсионерам и ветеранам<br>при предъявлении удостоверения</span>
+        </div>
+      </div>
+
+      <div class="offer-card svo">
+        <div class="offer-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+        </div>
+        <div class="offer-text">
+          <span class="offer-disc">−15% + БО-13</span>
+          <span class="offer-label">Семьям участников СВО<br>помощь с документами для военкомата</span>
+        </div>
+      </div>
+
+      <div class="offer-card rassr">
+        <div class="offer-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+        </div>
+        <div class="offer-text">
+          <span class="offer-disc">0%</span>
+          <span class="offer-label">Беспроцентная рассрочка<br>до 6 месяцев от мастерской</span>
+        </div>
+      </div>
+
+      <div class="offer-cta">
+        <button class="btn-calc">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="8" y1="6" x2="16" y2="6"/><line x1="8" y1="10" x2="16" y2="10"/><line x1="8" y1="14" x2="12" y2="14"/></svg>
+          Рассчитать смету
+        </button>
+        <div class="cta-contacts">
+          <a class="cta-msg wa" title="WhatsApp">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+          </a>
+          <a class="cta-msg tg" title="Telegram">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+          </a>
+          <a class="cta-msg phone" title="Позвонить">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.15 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.07 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21 16.92z"/></svg>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-inner">
+      <div>
+        <div class="hero-eyebrow">Павловский Посад и Московская область</div>
+        <h1>Памятник и благоустройство участка «под ключ» — от <em>производителя</em></h1>
+        <p class="hero-desc">Собственный цех, свои мастера. В договоре указана финальная цена, в которую уже включены замер, доставка, установка и вывоз мусора.</p>
+        <div class="hero-chips">
+          <span class="hero-chip accent">В 2–3 раза дешевле Москвы</span>
+          <span class="hero-chip">Выезд мастера бесплатно</span>
+          <span class="hero-chip">Беспроцентная рассрочка</span>
+          <span class="hero-chip">Бессрочное хранение в цеху</span>
+        </div>
+        <div class="hero-cta">
+          <button class="btn btn-main">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+            Рассчитать смету за 2 минуты
+          </button>
+          <button class="btn btn-ghost">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.15 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.07 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21 16.92z"/></svg>
+            Позвонить
+          </button>
+        </div>
+      </div>
+
+      <div class="hero-form">
+        <div class="form-heading">Получите смету в мессенджер</div>
+        <div class="form-sub">5 вопросов · PDF с расчётом за 15 минут · без звонков</div>
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label">Что нужно?</label>
+            <select>
+              <option>Памятник с установкой</option>
+              <option>Благоустройство участка</option>
+              <option>Памятник + благоустройство</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Тип</label>
+            <select>
+              <option>Одиночное захоронение</option>
+              <option>Двойной комплекс</option>
+              <option>Семейный мемориал</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label">Бюджет</label>
+            <select>
+              <option>До 60 000 ₽</option>
+              <option>60–100 тыс. ₽</option>
+              <option>100–200 тыс. ₽</option>
+              <option>Более 200 тыс. ₽</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Срок</label>
+            <select>
+              <option>Как можно скорее</option>
+              <option>К годовщине</option>
+              <option>Весна / без спешки</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-row one">
+          <div class="form-group">
+            <label class="form-label">Дополнительные пожелания</label>
+            <textarea placeholder="Например: фигурный памятник, цветная гравировка, особый шрифт текста..."></textarea>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label">Ваше имя</label>
+            <input type="text" placeholder="Как обращаться">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Телефон</label>
+            <input type="tel" placeholder="+7 (___) ___-__-__">
+          </div>
+        </div>
+        <div class="form-row one">
+          <div class="form-group">
+            <label class="form-label">Куда прислать смету</label>
+            <div class="msg-choice">
+              <span class="mc active" onclick="pickMc(this)">WhatsApp</span>
+              <span class="mc" onclick="pickMc(this)">Telegram</span>
+              <span class="mc" onclick="pickMc(this)">MAX</span>
+              <span class="mc" onclick="pickMc(this)">Позвоните мне</span>
+            </div>
+          </div>
+        </div>
+        <button class="btn-submit">Получить смету →</button>
+        <div class="form-promises">
+          <span class="fp">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" color="#1a7a55"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            Ответим за 15 мин
+          </span>
+          <span class="fp">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" color="#1a7a55"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+            Данные конфиденциальны
+          </span>
+          <span class="fp">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" color="#1a7a55"><line x1="1" y1="1" x2="23" y2="23"/><path d="M16.5 16.5A3.5 3.5 0 0 1 10 20a3.5 3.5 0 0 1 0-7h7"/></svg>
+            Без навязчивых звонков
+          </span>
+        </div>
+        <p class="form-policy">Нажимая кнопку, вы соглашаетесь с обработкой персональных данных.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CATALOG -->
+<section class="section">
+  <div class="container">
+    <div class="s-tag">Каталог памятников</div>
+    <h2>Подберите форму и размер</h2>
+    <p class="s-desc">Цена зависит от формы, размера и материала. В каталоге — реальные образцы из нашего цеха. Все позиции можем выпилить под ваш индивидуальный эскиз.</p>
+
+    <div class="cat-filters">
+      <div class="cat-filter active" onclick="setFilter(this)">Все формы</div>
+      <div class="cat-filter" onclick="setFilter(this)">Классические</div>
+      <div class="cat-filter" onclick="setFilter(this)">Фигурные</div>
+      <div class="cat-filter" onclick="setFilter(this)">Кресты</div>
+      <div class="cat-filter" onclick="setFilter(this)">Сердца</div>
+      <div class="cat-filter" onclick="setFilter(this)">Ангелы</div>
+    </div>
+
+    <div class="cat-carousel-wrap">
+      <div class="cat-nav prev" onclick="scrollCat(-1)">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+      </div>
+      <div class="cat-nav next" onclick="scrollCat(1)">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+      </div>
+
+      <div class="cat-scroll" id="catScroll">
+
+        <div class="cat-card">
+          <div class="cat-img">
+            <svg width="60" height="100" viewBox="0 0 60 100"><rect x="10" y="5" width="40" height="75" rx="2" fill="currentColor" opacity=".6"/><rect x="5" y="80" width="50" height="10" fill="currentColor" opacity=".4"/></svg>
+          </div>
+          <div class="cat-info">
+            <div class="cat-form">Классическая · прямая</div>
+            <div class="cat-name">Стела «Берёзка»</div>
+            <div class="cat-meta">
+              <span class="cat-size">60×30×8</span>
+              <span class="cat-price">от 18 000 ₽</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="cat-card">
+          <div class="cat-img">
+            <svg width="60" height="100" viewBox="0 0 60 100"><path d="M30 5 L50 5 Q52 5 52 20 L52 80 L8 80 L8 20 Q8 5 10 5 Z" fill="currentColor" opacity=".6"/><rect x="5" y="80" width="50" height="10" fill="currentColor" opacity=".4"/></svg>
+          </div>
+          <div class="cat-info">
+            <div class="cat-form">Классическая · полукруг</div>
+            <div class="cat-name">Стела «Арка»</div>
+            <div class="cat-meta">
+              <span class="cat-size">100×50×8</span>
+              <span class="cat-price">от 28 000 ₽</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="cat-card">
+          <div class="cat-img">
+            <svg width="80" height="100" viewBox="0 0 80 100"><path d="M10 80 Q10 5 40 5 Q70 5 70 80 Z" fill="currentColor" opacity=".6"/><rect x="5" y="80" width="70" height="10" fill="currentColor" opacity=".4"/></svg>
+          </div>
+          <div class="cat-info">
+            <div class="cat-form">Фигурная · асимметрия</div>
+            <div class="cat-name">Стела «Волна»</div>
+            <div class="cat-meta">
+              <span class="cat-size">110×60×8</span>
+              <span class="cat-price">от 42 000 ₽</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="cat-card">
+          <div class="cat-img">
+            <svg width="60" height="100" viewBox="0 0 60 100"><rect x="25" y="5" width="10" height="75" fill="currentColor" opacity=".6"/><rect x="10" y="25" width="40" height="10" fill="currentColor" opacity=".6"/><rect x="5" y="80" width="50" height="10" fill="currentColor" opacity=".4"/></svg>
+          </div>
+          <div class="cat-info">
+            <div class="cat-form">Крест · православный</div>
+            <div class="cat-name">Крест «Восьмиконечный»</div>
+            <div class="cat-meta">
+              <span class="cat-size">120×40×8</span>
+              <span class="cat-price">от 35 000 ₽</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="cat-card">
+          <div class="cat-img">
+            <svg width="80" height="100" viewBox="0 0 80 100"><path d="M40 78 C20 50 5 35 5 20 C5 8 15 5 25 12 C30 16 35 20 40 25 C45 20 50 16 55 12 C65 5 75 8 75 20 C75 35 60 50 40 78 Z" fill="currentColor" opacity=".6"/><rect x="5" y="80" width="70" height="10" fill="currentColor" opacity=".4"/></svg>
+          </div>
+          <div class="cat-info">
+            <div class="cat-form">Сердце · фигурная</div>
+            <div class="cat-name">Стела «Любящему сердцу»</div>
+            <div class="cat-meta">
+              <span class="cat-size">90×80×8</span>
+              <span class="cat-price">от 48 000 ₽</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="cat-card">
+          <div class="cat-img">
+            <svg width="60" height="100" viewBox="0 0 60 100"><circle cx="30" cy="20" r="8" fill="currentColor" opacity=".6"/><path d="M15 30 Q30 25 45 30 L40 75 L20 75 Z" fill="currentColor" opacity=".6"/><path d="M10 40 L20 45 L20 55 Z M50 40 L40 45 L40 55 Z" fill="currentColor" opacity=".5"/><rect x="5" y="80" width="50" height="10" fill="currentColor" opacity=".4"/></svg>
+          </div>
+          <div class="cat-info">
+            <div class="cat-form">Ангел · скульптурная</div>
+            <div class="cat-name">«Ангел-хранитель»</div>
+            <div class="cat-meta">
+              <span class="cat-size">100×50×30</span>
+              <span class="cat-price">от 95 000 ₽</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="cat-card">
+          <div class="cat-img">
+            <svg width="100" height="100" viewBox="0 0 100 100"><rect x="10" y="20" width="80" height="55" rx="2" fill="currentColor" opacity=".6"/><rect x="5" y="75" width="90" height="10" fill="currentColor" opacity=".4"/></svg>
+          </div>
+          <div class="cat-info">
+            <div class="cat-form">Двойная · горизонтальная</div>
+            <div class="cat-name">Стела «Семейная»</div>
+            <div class="cat-meta">
+              <span class="cat-size">80×120×8</span>
+              <span class="cat-price">от 58 000 ₽</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="cat-card">
+          <div class="cat-img">
+            <svg width="60" height="100" viewBox="0 0 60 100"><path d="M30 5 L45 25 L45 80 L15 80 L15 25 Z" fill="currentColor" opacity=".6"/><rect x="5" y="80" width="50" height="10" fill="currentColor" opacity=".4"/></svg>
+          </div>
+          <div class="cat-info">
+            <div class="cat-form">Фигурная · домик</div>
+            <div class="cat-name">Стела «Часовня»</div>
+            <div class="cat-meta">
+              <span class="cat-size">100×40×8</span>
+              <span class="cat-price">от 38 000 ₽</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <p style="margin-top:24px; font-size:13px; color:var(--muted); text-align:center;">
+      Цена указана для базового размера. Полный каталог содержит более 80 форм. Также делаем индивидуальный выпил по вашему эскизу.
+    </p>
+  </div>
+</section>
+
+<!-- PRODUCTS -->
+<section class="section section-alt">
+  <div class="container">
+    <div class="s-tag">Готовые решения</div>
+    <h2>Пакеты «под ключ»</h2>
+    <p class="s-desc">Если не хотите долго выбирать — возьмите готовый пакет. Финальная цена в договоре, в которую уже включены замер, доставка, установка и вывоз мусора.</p>
+    <div class="products-grid fade-up">
+
+      <div class="prod-card">
+        <div class="prod-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/></svg>
+        </div>
+        <div class="prod-name">«Базовый»</div>
+        <div class="prod-price">от 45 000 ₽ — всё включено</div>
+        <ul class="prod-list">
+          <li>Стела из карельского габбро-диабаза</li>
+          <li>Гравировка: портрет, текст, орнамент</li>
+          <li>Тумба и цветник из гранита</li>
+          <li>Замер, доставка, монтаж на ж/б балки</li>
+          <li>Вывоз строительного мусора</li>
+          <li>Гарантия 10 лет</li>
+        </ul>
+        <div class="prod-cta">Рассчитать точную стоимость →</div>
+      </div>
+
+      <div class="prod-card featured">
+        <div class="feat-badge">Выбор большинства</div>
+        <div class="prod-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        </div>
+        <div class="prod-name">«Чистый участок»</div>
+        <div class="prod-price">от 85 000 ₽ — всё включено</div>
+        <ul class="prod-list">
+          <li>Всё из пакета «Базовый»</li>
+          <li>Заливка участка армированным бетоном</li>
+          <li>Укладка гранитной или керамической плитки</li>
+          <li>Надгробная плита (минимум ухода)</li>
+          <li>Согласование с администрацией кладбища</li>
+        </ul>
+        <div class="prod-cta">Рассчитать точную стоимость →</div>
+      </div>
+
+      <div class="prod-card">
+        <div class="prod-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </div>
+        <div class="prod-name">«Семейный»</div>
+        <div class="prod-price">от 120 000 ₽ — всё включено</div>
+        <ul class="prod-list">
+          <li>Горизонтальная стела на двоих (+ место под второе имя)</li>
+          <li>Общий бетонный цоколь</li>
+          <li>Глухая надгробная плита на весь участок</li>
+          <li>Гравировка двух портретов</li>
+          <li>Решаем вопросы с администрацией кладбища</li>
+        </ul>
+        <div class="prod-cta">Рассчитать точную стоимость →</div>
+      </div>
+
+      <div class="prod-card">
+        <div class="prod-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15 8 22 9 17 14 18 22 12 18 6 22 7 14 2 9 9 8 12 2"/></svg>
+        </div>
+        <div class="prod-name">«Героям»</div>
+        <div class="prod-price">от 65 000 ₽ — для семей СВО и ветеранов</div>
+        <ul class="prod-list">
+          <li>Сочетание красного и чёрного гранита</li>
+          <li>Цветная гравировка символики и наград</li>
+          <li>Помощь с пакетом документов (БО-13)</li>
+          <li>Скидка 15% для семей участников СВО</li>
+          <li>Сопровождение от военкомата до монтажа</li>
+        </ul>
+        <div class="prod-cta">Узнать подробнее →</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section class="section">
+  <div class="container">
+    <div class="s-tag">Преимущества</div>
+    <h2>Почему выбирают нас</h2>
+    <p class="s-desc">Конкретные факты, которые можно проверить лично в нашем цеху.</p>
+    <div class="features-grid fade-up">
+
+      <div class="feat-card">
+        <div class="feat-icon-wrap">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 20h20M6 20V10M12 20V4M18 20v-6"/></svg>
+        </div>
+        <div>
+          <div class="feat-title">Собственный цех и свои мастера</div>
+          <div class="feat-text">Не посредники. Сами режем и полируем гранит. Цена в 2–3 раза ниже московской, любая нестандартная форма — без доплат.</div>
+        </div>
+      </div>
+
+      <div class="feat-card">
+        <div class="feat-icon-wrap">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+        </div>
+        <div>
+          <div class="feat-title">Финальная цена в договоре</div>
+          <div class="feat-text">В смете уже учтены замер, камень, гравировка, доставка, установка и вывоз мусора. Никаких доплат «по факту».</div>
+        </div>
+      </div>
+
+      <div class="feat-card">
+        <div class="feat-icon-wrap">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        </div>
+        <div>
+          <div class="feat-title">Бессрочное хранение в цеху</div>
+          <div class="feat-text">Готовое изделие может ждать установки сколько потребуется — на закрытом складе мастерской. Никаких доплат за хранение.</div>
+        </div>
+      </div>
+
+      <div class="feat-card">
+        <div class="feat-icon-wrap">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        </div>
+        <div>
+          <div class="feat-title">Выезд мастера бесплатно</div>
+          <div class="feat-text">Приедем с образцами камня к вам домой, сделаем замеры на участке. Никуда ехать самим не нужно.</div>
+        </div>
+      </div>
+
+      <div class="feat-card">
+        <div class="feat-icon-wrap">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+        </div>
+        <div>
+          <div class="feat-title">Гарантия 10 лет письменно</div>
+          <div class="feat-text">Договор с синей печатью. Памятник просел или треснул — приедем и исправим за свой счёт.</div>
+        </div>
+      </div>
+
+      <div class="feat-card">
+        <div class="feat-icon-wrap">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        </div>
+        <div>
+          <div class="feat-title">Фотоотчёт каждого этапа</div>
+          <div class="feat-text">Фото и видео скрытых работ в ваш мессенджер: залили цоколь, поставили стелу — всё фиксируем. Не нужно стоять над душой у рабочих.</div>
+        </div>
+      </div>
+
+      <div class="feat-card">
+        <div class="feat-icon-wrap">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+        </div>
+        <div>
+          <div class="feat-title">Сами решаем вопросы с кладбищем</div>
+          <div class="feat-text">Получаем пропуска, согласовываем размеры, ведём переговоры с местными службами. Вам не нужно ездить и звонить.</div>
+        </div>
+      </div>
+
+      <div class="feat-card">
+        <div class="feat-icon-wrap">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+        </div>
+        <div>
+          <div class="feat-title">Авторская ретушь портрета</div>
+          <div class="feat-text">Художник прорабатывает каждую черту лица. Эскиз показываем на согласование и правим до вашего «да». Только потом — на камень.</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="section section-alt">
+  <div class="container">
+    <div class="about-wrap fade-up">
+      <div class="about-photo">
+        <div class="about-photo-inner">
+          <div class="about-initials">МТ</div>
+          <div class="about-photo-label">фото руководителя</div>
+        </div>
+      </div>
+      <div class="about-content">
+        <div class="s-tag">Руководитель</div>
+        <div class="about-name">Мария Табачок</div>
+        <div class="about-role">Основатель мастерской «Заозерье»</div>
+        <div class="about-text">
+          <p class="lead">Гранит — это дело моей семьи. Я выросла среди заготовок и эскизов, а на работу в цех приходила раньше, чем в школу. Сегодня я продолжаю дело отца — и отношусь к нему так же, как он научил: <em>с уважением к камню и к человеку, который пришёл за помощью</em>.</p>
+          <p>Я лично отслеживаю каждый этап работы — от первого звонка до момента, когда мастера уезжают с участка, оставив всё чистым. Сама согласовываю эскизы, контролирую качество гравировки и общаюсь с клиентами в сложных случаях.</p>
+          <p>Мне важно, чтобы человек, обратившийся в мастерскую, чувствовал не давление и не «продажу», а опору. Я никогда не навязываю лишнего и говорю по факту: что нужно, что — нет, как сделать достойно при любом бюджете.</p>
+          <div class="quote">«Моя цель — разделить с человеком его горе и помочь выполнить последнюю волю лучшим образом. Не больше, не меньше».</div>
+        </div>
+        <div class="about-stats">
+          <div class="stat-item">
+            <div class="stat-num">15+</div>
+            <div class="stat-label">лет опыта в производстве гранита</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-num">500+</div>
+            <div class="stat-label">выполненных заказов</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-num">4.9</div>
+            <div class="stat-label">рейтинг на Яндекс.Картах</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="section section-dark">
+  <div class="container">
+    <div class="s-tag">Как мы работаем</div>
+    <h2>Процесс — от эскиза до установки</h2>
+    <p class="s-desc">Каждый этап в нашем цеху. Никаких посредников, никаких «передадим подрядчикам».</p>
+
+    <div class="process-carousel">
+
+      <div class="process-card">
+        <div class="process-img">
+          <span class="process-img-badge">фото из цеха</span>
+          <div class="process-num">01</div>
+        </div>
+        <div class="process-info">
+          <div class="process-step">Шаг 1</div>
+          <div class="process-title">Выезд мастера и замер</div>
+          <div class="process-text">Приезжаем с образцами камня домой или на участок, делаем точные замеры.</div>
+        </div>
+      </div>
+
+      <div class="process-card">
+        <div class="process-img">
+          <span class="process-img-badge">фото из цеха</span>
+          <div class="process-num">02</div>
+        </div>
+        <div class="process-info">
+          <div class="process-step">Шаг 2</div>
+          <div class="process-title">Эскиз и согласование</div>
+          <div class="process-text">Готовим 3D-макет и эскиз гравировки. Правим бесплатно до вашего «да».</div>
+        </div>
+      </div>
+
+      <div class="process-card">
+        <div class="process-img">
+          <span class="process-img-badge">видео из цеха</span>
+          <div class="process-num">03</div>
+        </div>
+        <div class="process-info">
+          <div class="process-step">Шаг 3</div>
+          <div class="process-title">Распил и обработка камня</div>
+          <div class="process-text">Режем гранит на собственном оборудовании, шлифуем и полируем грани.</div>
+        </div>
+      </div>
+
+      <div class="process-card">
+        <div class="process-img">
+          <span class="process-img-badge">фото из цеха</span>
+          <div class="process-num">04</div>
+        </div>
+        <div class="process-info">
+          <div class="process-step">Шаг 4</div>
+          <div class="process-title">Гравировка и ретушь</div>
+          <div class="process-text">Художник прорабатывает портрет, мастер наносит изображение и текст.</div>
+        </div>
+      </div>
+
+      <div class="process-card">
+        <div class="process-img">
+          <span class="process-img-badge">фото монтажа</span>
+          <div class="process-num">05</div>
+        </div>
+        <div class="process-info">
+          <div class="process-step">Шаг 5</div>
+          <div class="process-title">Доставка и монтаж</div>
+          <div class="process-text">Своя бригада устанавливает на ж/б балки, фотоотчёт каждого этапа в мессенджер.</div>
+        </div>
+      </div>
+
+      <div class="process-card">
+        <div class="process-img">
+          <span class="process-img-badge">фото после</span>
+          <div class="process-num">06</div>
+        </div>
+        <div class="process-info">
+          <div class="process-step">Шаг 6</div>
+          <div class="process-title">Сдача и уборка</div>
+          <div class="process-text">Вывозим строительный мусор, оставляем участок чистым. Выдаём гарантийный договор.</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="section">
+  <div class="container">
+    <div class="reviews-header">
+      <div>
+        <div class="s-tag">Отзывы</div>
+        <h2>Что говорят клиенты</h2>
+        <p class="s-desc" style="margin-bottom:0;">Реальные отзывы с Яндекс.Карт, Авито и 2ГИС.</p>
+      </div>
+      <div class="reviews-rating">
+        <div class="yamap-logo">Я</div>
+        <div>
+          <div class="rating-num">4.9 <span style="font-size:14px; color:var(--muted); font-weight:400;">/ 5.0</span></div>
+          <div class="rating-stars">★★★★★</div>
+          <div class="rating-source">по 87 отзывам на Яндекс.Картах</div>
+          <a class="rating-link" href="#">Все отзывы на Яндекс.Картах →</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="reviews-grid fade-up">
+
+      <div class="review-card">
+        <div style="display:flex;align-items:center;justify-content:space-between;">
+          <div class="review-stars">★★★★★</div>
+          <div class="review-src">Яндекс.Карты</div>
+        </div>
+        <div class="review-quote">«Заказывала памятник маме, очень боялась, что сделают непохоже. Мария лично занималась ретушью — показала эскиз, я попросила поправить улыбку, всё исправили без лишних слов. Поставили в срок, участок чистый. Цена точь-в-точь как в договоре.»</div>
+        <div class="review-author">
+          <div class="review-ava">НК</div>
+          <div>
+            <div class="review-name">Наталья К.</div>
+            <div class="review-loc">Павловский Посад · 2 недели назад</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="review-card">
+        <div style="display:flex;align-items:center;justify-content:space-between;">
+          <div class="review-stars">★★★★★</div>
+          <div class="review-src">Авито</div>
+        </div>
+        <div class="review-quote">«Работаю в режиме нон-стоп, ехать смотреть образцы не было времени. Мастер приехал домой с каталогом, замерил фото папы. Все этапы монтажа — фото в WhatsApp. К годовщине всё стояло. Рекомендую.»</div>
+        <div class="review-author">
+          <div class="review-ava">АС</div>
+          <div>
+            <div class="review-name">Андрей С.</div>
+            <div class="review-loc">Электросталь · месяц назад</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="review-card">
+        <div style="display:flex;align-items:center;justify-content:space-between;">
+          <div class="review-stars">★★★★★</div>
+          <div class="review-src">Яндекс.Карты</div>
+        </div>
+        <div class="review-quote">«Памятник изготовили, а у нас были сложности с участком — оформление документов затянулось. Готовое изделие хранилось у них в цеху бесплатно почти полгода. Когда все вопросы решились — приехали и установили. Очень благодарна за человеческое отношение.»</div>
+        <div class="review-author">
+          <div class="review-ava">ЛМ</div>
+          <div>
+            <div class="review-name">Людмила М.</div>
+            <div class="review-loc">Ногинск · 3 месяца назад</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="review-card">
+        <div style="display:flex;align-items:center;justify-content:space-between;">
+          <div class="review-stars">★★★★★</div>
+          <div class="review-src">2ГИС</div>
+        </div>
+        <div class="review-quote">«Заказали семейный комплекс с заливкой всего участка. Ребята сами договорились с администрацией, сами вывезли старую ограду. Мы только приехали принять работу. Выглядит дорого, а заплатили намного меньше, чем просили в Москве.»</div>
+        <div class="review-author">
+          <div class="review-ava">ИВ</div>
+          <div>
+            <div class="review-name">Игорь В.</div>
+            <div class="review-loc">Орехово-Зуево · 2 месяца назад</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section section-alt">
+  <div class="container" style="max-width:760px;">
+    <div class="s-tag">Вопросы и ответы</div>
+    <h2>Что чаще всего спрашивают</h2>
+    <p class="s-desc">Самые частые вопросы — про цены, фото и пакеты «под ключ».</p>
+    <div class="faq-list fade-up">
+
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          Что входит в финальную цену в договоре? Будут ли доплаты?
+          <div class="faq-toggle">+</div>
+        </div>
+        <div class="faq-a">Цена в договоре — окончательная. В неё уже включены: замер на участке, изготовление изделия, художественное оформление (гравировка, портрет), доставка до кладбища, монтаж на железобетонные балки, вывоз строительного мусора. Доплаты могут возникнуть только если вы сами захотите добавить что-то сверху (например, гранитную вазу или ограду) — и только после вашего согласия.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          От чего зависит цена памятника?
+          <div class="faq-toggle">+</div>
+        </div>
+        <div class="faq-a">Три основных фактора: размер стелы, сложность формы и объём гравировки. Простая прямая стела 60×30 — это от 18 тысяч ₽. Фигурная форма «Сердце» или «Ангел» — от 48 тысяч ₽. Полное благоустройство участка с заливкой бетоном — от 85 тысяч ₽. Точную смету пришлём в мессенджер после уточнения деталей.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          У меня нет хорошего фото покойного — что делать?
+          <div class="faq-toggle">+</div>
+        </div>
+        <div class="faq-a">Подойдёт любая фотография, где лицо различимо — даже старая, потрёпанная или сделанная издалека. Художник-ретушёр восстанавливает детали и прорабатывает черты вручную. Перед нанесением на камень вы получите эскиз для согласования и сможете попросить любые правки. Только после вашего одобрения переносим изображение на гранит.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          Что входит в пакет «под ключ»?
+          <div class="faq-toggle">+</div>
+        </div>
+        <div class="faq-a">«Под ключ» означает, что вам не нужно ничего организовывать самим. В пакет входит: выезд мастера и замер, изготовление стелы и цоколя, гравировка портрета и текста, доставка на кладбище, согласование с администрацией, монтаж на железобетонные балки, уборка территории и вывоз мусора. Вы платите одну сумму — мы делаем всё. Подробный состав каждого пакета смотрите в разделе «Пакеты под ключ».</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          Сколько по времени делается памятник?
+          <div class="faq-toggle">+</div>
+        </div>
+        <div class="faq-a">Базовый пакет — около 14–21 дня от подписания договора. Если нужна сложная фигурная форма или скульптура — до 35–45 дней. На монтаж нужно ещё 1 день. В осенне-зимний период сроки изготовления обычно короче — меньше очередь. Если у вас срочный заказ (например, к годовщине), скажите менеджеру — поставим в приоритет.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          Можно ли заказать памятник по своему эскизу?
+          <div class="faq-toggle">+</div>
+        </div>
+        <div class="faq-a">Да. У нас собственное производство, поэтому мы выпиливаем сложные индивидуальные формы без накруток в цене (в отличие от перекупов, которые заказывают на стороне). Принесите рисунок, фото из интернета или просто опишите словами — наш дизайнер подготовит чертёж и 3D-макет, согласует с вами, и только после этого мы запустим в производство.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          А если я закажу сейчас, но установить смогу не скоро?
+          <div class="faq-toggle">+</div>
+        </div>
+        <div class="faq-a">Это нормальная ситуация — у многих клиентов так бывает (земля не готова, документы не оформлены, ждут весны или родственников). Готовый памятник хранится у нас на закрытом складе бесплатно — сколько потребуется. Цену фиксируем в договоре в день оплаты и в дальнейшем не меняем. Когда будете готовы — пишете, и мы выезжаем на установку.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          Есть ли рассрочка?
+          <div class="faq-toggle">+</div>
+        </div>
+        <div class="faq-a">Да. Беспроцентная рассрочка от мастерской на срок до 6 месяцев. Никаких банков и поручителей. Стандартно: аванс при заключении договора (около 50%), остаток равными частями до установки. Условия гибкие — обсуждаем индивидуально.</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <div class="container">
+    <div class="s-tag" style="color:var(--accent);justify-content:center;">Следующий шаг</div>
+    <h2>Получите смету прямо сейчас</h2>
+    <p class="cta-desc">5 вопросов · PDF с тремя вариантами · ответим за 15 минут · без звонков</p>
+    <div class="cta-btns">
+      <button class="btn btn-main">Написать в WhatsApp</button>
+      <button class="btn btn-main" style="background:var(--accent);color:var(--stone);">Рассчитать смету онлайн</button>
+      <button class="btn-outline-white">+7 (496) 000-00-00</button>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <div>
+        <div class="footer-logo">Гранит Заозерье</div>
+        <div class="footer-tagline">Собственное производство гранитных памятников и благоустройства участков. Павловский Посад и Московская область.</div>
+        <div class="footer-phone">+7 (496) 000-00-00</div>
+        <div class="footer-hours">Пн–Пт 9:00–18:00 · Сб 10:00–16:00</div>
+      </div>
+      <div>
+        <div class="footer-title">Пакеты</div>
+        <ul class="footer-links">
+          <li>«Базовый»</li>
+          <li>«Чистый участок»</li>
+          <li>«Семейный»</li>
+          <li>«Героям»</li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-title">Информация</div>
+        <ul class="footer-links">
+          <li>Каталог памятников</li>
+          <li>О мастерской</li>
+          <li>Процесс работы</li>
+          <li>Отзывы клиентов</li>
+          <li>Вопросы и ответы</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 Гранит Заозерье. Все права защищены.</span>
+      <span>Московская обл., Павловский Посад</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+function pickMc(el) {
+  document.querySelectorAll('.mc').forEach(e => e.classList.remove('active'));
+  el.classList.add('active');
+}
+function toggleFaq(el) {
+  const item = el.parentElement;
+  const isOpen = item.classList.contains('open');
+  document.querySelectorAll('.faq-item.open').forEach(i => i.classList.remove('open'));
+  if (!isOpen) item.classList.add('open');
+}
+function setFilter(el) {
+  document.querySelectorAll('.cat-filter').forEach(f => f.classList.remove('active'));
+  el.classList.add('active');
+}
+function scrollCat(dir) {
+  const el = document.getElementById('catScroll');
+  el.scrollBy({ left: dir * 240, behavior: 'smooth' });
+}
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); }
+  });
+}, { threshold: 0.1 });
+document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
